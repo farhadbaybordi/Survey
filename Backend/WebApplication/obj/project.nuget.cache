@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "brAQxeVLdeAiA1KHr9F3mWaIE35viWXLf0G+IdZz72HDN8UCimOAbQmsZX7BRvecGeRB6MSd8EGIyaONYTiWqg==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Survey\\Backend\\WebApplication\\WebApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\baybordif\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}
