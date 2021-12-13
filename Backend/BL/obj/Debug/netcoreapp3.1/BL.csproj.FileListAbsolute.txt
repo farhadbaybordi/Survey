@@ -1,0 +1,11 @@
+C:\Projects\Survey\Backend\BL\bin\Debug\netcoreapp3.1\BL.deps.json
+C:\Projects\Survey\Backend\BL\bin\Debug\netcoreapp3.1\BL.dll
+C:\Projects\Survey\Backend\BL\bin\Debug\netcoreapp3.1\BL.pdb
+C:\Projects\Survey\Backend\BL\obj\Debug\netcoreapp3.1\BL.AssemblyInfoInputs.cache
+C:\Projects\Survey\Backend\BL\obj\Debug\netcoreapp3.1\BL.AssemblyInfo.cs
+C:\Projects\Survey\Backend\BL\obj\Debug\netcoreapp3.1\BL.csproj.CoreCompileInputs.cache
+C:\Projects\Survey\Backend\BL\obj\Debug\netcoreapp3.1\BL.dll
+C:\Projects\Survey\Backend\BL\obj\Debug\netcoreapp3.1\BL.pdb
+C:\Projects\Survey\Backend\BL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Projects\Survey\Backend\BL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Projects\Survey\Backend\BL\obj\Debug\netcoreapp3.1\BL.csproj.CopyComplete

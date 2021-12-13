@@ -1,15 +1,13 @@
+using BL.Services;
+using DAL.Context;
+using DAL.Entities;
+using DAL.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebApplication
 {
@@ -22,13 +20,26 @@ namespace WebApplication
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<IRepository<Question, QuestionContext>, BaseRepository<Question, QuestionContext>>();
+            services.AddSingleton<IRepository<Participant, ParticipantContext>, BaseRepository<Participant, ParticipantContext>>();
+            services.AddSingleton<IRepository<Answer, AnswerContext>, BaseRepository<Answer, AnswerContext>>();
+
+            services.AddSingleton<ISurveyServices, QuestionServices>();
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins("*");
+                    });
+            });
+            AddDbContext(services);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -45,6 +56,25 @@ namespace WebApplication
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+        }
+
+        private void AddDbContext(IServiceCollection services)
+        {
+            services.AddDbContextFactory<QuestionContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("SqlDBC"),
+                    assembly => assembly.MigrationsAssembly("DAL"));
+            });
+            services.AddDbContextFactory<ParticipantContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("SqlDBC"),
+                    assembly => assembly.MigrationsAssembly("DAL"));
+            });
+            services.AddDbContextFactory<AnswerContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("SqlDBC"),
+                    assembly => assembly.MigrationsAssembly("DAL"));
             });
         }
     }

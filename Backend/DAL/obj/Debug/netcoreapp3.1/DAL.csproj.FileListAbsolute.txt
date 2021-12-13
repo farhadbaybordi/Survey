@@ -1,0 +1,11 @@
+C:\Projects\Survey\Backend\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+C:\Projects\Survey\Backend\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Projects\Survey\Backend\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Projects\Survey\Backend\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+C:\Projects\Survey\Backend\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+C:\Projects\Survey\Backend\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Projects\Survey\Backend\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+C:\Projects\Survey\Backend\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+C:\Projects\Survey\Backend\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
+C:\Projects\Survey\Backend\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
+C:\Projects\Survey\Backend\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache
